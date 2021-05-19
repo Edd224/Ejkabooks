@@ -1,0 +1,980 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Beth+Ellen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+    background: #111; 
+
+}
+html{
+    scroll-behavior: smooth;
+
+}
+p{
+    text-indent: 18px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NAV */
+
+
+nav{
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0 5%;
+    height: 50px;
+    background:linear-gradient(-55deg, #3f0229, #003f52, #000000, #004d3c);
+    background-size: 400% 400%;
+    position: relative;
+    animation:  change 18s ease-in-out infinite;
+
+
+}
+
+
+
+
+
+nav .logo {
+    float: left;
+    width: 16%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'Shippori Mincho B1', serif;    font-size: 28px;
+    font-weight: 500;
+    color: #fff;
+    animation-duration: 12s;
+
+    
+
+}
+
+nav .links{
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+nav .links li{
+    list-style: none;
+}
+nav .links a{
+    font-family: 'Shippori Mincho B1', serif;  
+    display: block;
+    padding: 1em;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+nav .links a:hover:hover{
+        transform: translateY(10px);
+        transition-duration: 0.7s;
+        transition-duration: 0.7s;
+        color: rgb(247, 239, 9);
+    
+        
+}
+
+#nav-toggle{
+    position: absolute;
+    top: -100px;
+}
+
+
+nav .icon-burger{
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+nav .icon-burger .line{
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+
+}
+
+@media screen and (max-width:768px) {
+    nav .logo{
+        float: none;
+        width: auto;
+        justify-content: center;
+        
+    }
+    nav .links{
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0%;
+        right: 0;
+        top: 100px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgba(0,0,0, .9);
+        overflow: hidden;
+        transition: all .5 ease-in-out;
+    }
+    nav .links a{
+        font-size: 20px;
+
+    }
+    nav :checked ~ .links{
+        bottom: 0;
+
+    }
+    nav .icon-burger{
+        display: block;
+    }
+    nav :checked ~ .icon-burger .line:nth-child(1){
+        transform: translateY(10px) rotateX(-225deg);
+    }
+    nav :checked ~ .icon-burger .line:nth-child(3){
+        transform: translateX(-20px) rotateX(225deg);
+    }
+    nav :checked ~ .icon-burger .line:nth-child(2){
+        opacity: 0;
+
+    }
+
+
+}
+
+.UVOD{
+    font-family: 'Shippori Mincho B1', serif;  
+    margin-top: 15px;
+    padding: 5px;
+    background: #000000;
+    color: #fff;
+    font-size: 45px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    word-spacing: 5px;
+    font-weight: 600;
+}
+.UVOD span{
+    font-family: 'Shippori Mincho B1', serif;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 400;
+
+
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* header */
+
+
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CARDS */
+
+
+
+
+
+
+
+.banner .container{
+    position: relative;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 70px;
+
+    
+}
+
+.banner .container .card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 100px 0;
+
+
+}
+
+
+.container .card:nth-child(odd){
+    flex-direction: row;
+}
+
+.container .card:nth-child(even){
+    flex-direction: row-reverse;
+    text-align: right;
+
+
+}
+
+
+.banner .container .card .imgBx{
+
+    position: relative;
+    left: 25px;
+    width: 300px;
+    height: 500px;
+    z-index: 1;
+
+
+
+}
+
+.container .card:nth-child(even) .imgBx{
+    left: -25px;
+}
+
+.banner .container .card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation-delay: 0.7s;
+    animation-duration: 1.7s;
+    box-shadow: 10px 7px 20px 7px;
+
+}
+
+
+
+
+
+
+.banner .container .card .contentBx{
+    position: relative;
+    right: 25px;
+    width: 700px;
+    height: 700px;
+    background:linear-gradient(-45deg, #007706, #52002a, #000000, #008367);
+    background-size: 400% 500%;
+    position: relative;
+    animation:  change 20s ease-in-out infinite;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 60px 20px 100px ;
+    opacity: .78;
+    
+
+
+
+}
+
+.container .card:nth-child(even) .contentBx{
+    right: -25px;
+    padding: 20px 100px 20px 60px ;
+
+
+
+}
+
+
+.banner .container .card .contentBx::before{
+    content: '';
+    position: absolute;
+    top: -50px;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    color: #fff;
+
+
+
+
+
+}
+@keyframes change
+{
+    0%
+    {
+        background-position: 0 50%;
+    }
+    50%
+    {
+        background-position: 100% 50%;
+    }
+    100%
+    {
+        background-position: 0 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.banner .container .card .contentBx p{
+    text-align: justify;
+    margin-top: 10px;
+    font-size: 20px;
+    color: #fff;
+    animation-delay: 1s;
+}
+
+
+
+
+.banner .container .CardUkazka .contentBx p{
+    text-align: justify;
+    margin-top: 10px;
+    font-size: 20px;
+    color: #fff;
+    animation-delay: 1.8s;
+}
+
+
+
+
+
+
+.banner .container .card .contentBx p span{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    color: #338033;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+.banner .container .card .contentBx a{
+    font-size: 25px;
+    display:inline-flex;
+    margin: 15px;
+    color: #ccc;
+    
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid rgb(247, 239, 9);
+    border-radius: 4px;
+    transition: .6s;
+    overflow: hidden;
+    animation-delay: 2s;
+    animation-duration: 5s;
+    
+}
+.banner .container .card .contentBx img{
+    width: 110px;
+    animation-duration: 2.8s;
+    animation-delay: 7s;
+}
+
+
+
+
+
+.banner .container .card .contentBx a:focus{
+    outline: none;
+}
+.banner .container .card .contentBx a:before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 0;
+    opacity: .2s;
+    transform: translateX(-130px) skewX(-15deg);
+}
+.banner .container .card .contentBx a:after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(87, 40, 40, 0.2);
+    left: 30px;
+    opacity: 0;
+    filter: blur(30px);
+    transform: translate(-100px) scale(-15deg);
+
+}
+.banner .container .card .contentBx a:hover{
+    background: rgb(247, 239, 9);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+
+}
+.banner .container .card .contentBx a:hover::before{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .8;
+    transition: .7s;
+}
+.banner .container .card .contentBx a:hover{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: .7s;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content h2{
+    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(247, 239, 9));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    color: #fff;
+    text-align: center;
+    font-family: 'Parisienne', cursive;
+    font-size: 70px;
+    font-weight: 400;
+    animation-duration: 2.3s;
+    animation-delay: 1.8s;
+
+}
+.content h6{
+    color: rgb(247, 239, 9);
+    font-size: 38px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+    margin: 5px;
+    animation-delay: 4.5s;
+    animation-duration: 2s;
+}
+.content img{
+    width: 60px;
+    border-radius: 5%;
+    padding: 10px;
+    
+}
+
+
+
+/* kontakt */
+
+
+.content h4{
+    display: flex;
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+.content p {
+    font-weight: 300;
+    color: #fff;
+}
+.content .AKOkupit {
+    font-weight: 300;
+    color: #fff;
+    font-size: 25px;
+    margin: 35px;
+}
+.contactInfo .box .icon {
+    display: flex;
+
+}
+.contactInfo .box .text{
+    margin: 0px 15px 20px ;
+    animation-duration: 2s;
+}
+
+.contactInfo .box .icon img {
+    height: 50px;
+    width: 50px;
+    animation-duration: 2s;
+}
+.contactInfo .box .text p ,a{
+    display: flex;
+    margin-left: 0px;
+    font-size: 25px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+    text-decoration: none;
+}
+.contactInfo .box .text h4{
+    font-weight: 400;
+    color: #00bcd4;
+}
+
+
+
+
+
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.banner video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+
+
+
+
+
+/* SIPKA */
+
+.sipka{
+    position: fixed;
+    top: 55%;
+    left: 50%;
+}
+
+
+
+.sipka span{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transform: rotate(45deg);
+    margin: -30px;
+    animation: SIPKA 2s infinite;
+
+}
+.sipka span:nth-child(2)
+{
+    animation-delay: -0.2s;
+}
+.sipka span:nth-child(3)
+{
+    animation-delay: -0.4s;
+}
+@keyframes SIPKA
+{
+    0%
+    {
+        opacity: 0;
+        transform: rotate(45deg) translate(-40px, -40px);
+
+    }
+    50%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+        transform: rotate(45deg) translate(40px, 40px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.banner .textBox{
+    position: relative;
+    max-width: 550px;
+    z-index: 2;
+
+    
+
+}
+
+
+
+
+
+
+.banner .videoBx {
+    position: relative;
+    background: #111;
+    margin-left: 40px;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+}
+
+.banner .videoBx video{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+
+
+footer{
+    background: #111;
+    height: auto;
+    width: auto;
+    font-family: 'Open Sans';
+    padding-top: 40px;
+    color: #fff;
+
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-family: 'Shippori Mincho B1', serif;    font-weight: 100;
+
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+
+}
+.socials a img{
+    width: 45px;
+
+}
+
+.socials a img:hover{
+    transform: rotate(360deg);
+    transition-duration: 0.7s;
+    
+
+}
+
+
+.footer-bottom{
+    background:linear-gradient(-45deg, #3d1138,#0a0c1d,#0f3d34, #103c46);
+    background-size: 500% 500%;
+    position: relative;
+    animation:  change 10s ease-in-out infinite;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    opacity: .4;
+    font-weight: 100;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MediaQuery */
+
+
+
+@media (max-width: 991px)
+{
+   header
+   {
+        padding: 20px 90px;
+        z-index: 1000;
+   }
+   .banner
+   {
+       padding: 150px 50px 0;
+       flex-direction: column;
+   }
+   .banner::before
+   {
+       display: none;
+   }
+   .banner .textBox
+   {
+       max-width: 100%;
+   }
+   .banner .textBox h2
+   {
+       font-size: 2.5em;
+   }
+   .banner .videoBx
+   {
+       width: 100%;
+       height: 200px;
+       margin: 0 auto;
+       margin-top: 15px;
+   }
+
+   .banner .sci
+   {
+       bottom: -50px;
+
+   }
+   .banner .container .card .contentBx
+   {
+       width: 100%;
+       height: auto;
+       right: 0;
+       padding: 30px;
+       text-align: center;
+   }
+   .banner .container .card .imgBx
+   {
+       left: 0;
+       width: 100%;
+       height: 400px;
+   }
+   .banner .container .card .contentBx p
+   {
+    text-align: left;
+   }
+   .content h2 
+   {
+       display: none;
+   }
+   .banner .container .card .contentBx p span
+   {
+       display: contents;
+   }
+   .banner .container
+   {
+       margin-top: -100px;
+       opacity: 1;
+       filter: blur(0);
+   }
+   .UVOD
+   {
+
+        font-size: 25px;
+        font-weight: 600;
+        margin: 20px;
+
+    }
+    .UVOD span 
+    {
+        margin: 20px;
+        font-size: 20px;
+    }
+    .sipka
+    {
+        margin-top: 300px;
+        left: 55%;
+
+    }
+    .sipka
+    {
+        top: 30%;
+    }
+    
+    .sipka span
+    {
+
+        width: 35px;
+        height: 35px;
+    }
+    .content .AKOkupit 
+    {   
+        font-size: 20px;
+        margin: 25px 50px;
+
+    }
+
+
+    
+    
+    
+
+
+   
+
+
+
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
